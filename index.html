@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MartClick: monte sua lista de compras e envie para atendimento.">
+  <title>MartClick — sua lista de compras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para a lista</a>
+  <header class="topbar"><a class="brand" href="#inicio" aria-label="MartClick, início"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Mart <b>Click</b></span></a><span class="client-pill">Cliente</span></header>
+  <main id="conteudo" class="page" tabindex="-1">
+    <section class="list-card" aria-labelledby="titulo">
+      <p class="eyebrow">LISTA RÁPIDA</p>
+      <h1 id="titulo">Olá! <span aria-hidden="true">👋</span></h1>
+      <p class="lead">Mande sua lista. Entregamos em até <strong>90 minutos.</strong></p>
+      <button class="voice-button" id="voice-button" type="button" aria-describedby="voice-help"><span aria-hidden="true">🎤</span> Mandar lista por áudio</button>
+      <p class="helper" id="voice-help">Você também pode digitar sua lista abaixo.</p>
+      <form id="shopping-form" novalidate>
+        <div class="field-group"><label for="item-1">O que você precisa?</label><div id="items" class="items"><div class="item-row"><input id="item-1" name="item" autocomplete="off" placeholder="Ex.: arroz" required><input name="quantity" inputmode="numeric" autocomplete="off" placeholder="Qtd."></div></div><button class="add-item" id="add-item" type="button">+ Adicionar outro item</button></div>
+        <div class="field-group"><label for="address">Endereço para entrega <span aria-hidden="true">*</span></label><textarea id="address" name="address" autocomplete="street-address" placeholder="Rua, número e bairro" required></textarea><p class="helper">O endereço é necessário para calcular a entrega.</p></div>
+        <button class="submit-button" type="submit">Montar minha lista <span aria-hidden="true">→</span></button>
+        <p class="form-status" id="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <dialog id="audio-dialog" aria-labelledby="audio-title"><div class="dialog-content"><button type="button" class="close-dialog" aria-label="Fechar" data-close>×</button><h2 id="audio-title">Áudio em breve</h2><p>Para esta demonstração, escreva os itens na lista. O recurso de áudio não grava nem coleta sua voz.</p><button type="button" class="dialog-action" data-close>Entendi</button></div></dialog>
+  <footer>MartClick · Lista simples para compras do dia a dia</footer>
+  <script src="script.js"></script>
+</body>
+</html>
